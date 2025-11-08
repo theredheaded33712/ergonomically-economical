@@ -1,0 +1,36 @@
+name: Quality Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Validate HTML
+      uses: Cyb3r-Jak3/html5validator-action@v7.2.0
+      with:
+        root: .
+        css: true
+        
+    - name: Check accessibility
+      uses: a11ywatch/github-action@v2.3.2
+      with:
+        WEBSITE_URL: https://theredheaded33712.github.io/ergonomically-economical/
+        SUBDOMAINS: false
+        TLD: false
+        
+    - name: Lighthouse CI
+      uses: treosh/lighthouse-ci-action@v10
+      with:
+        urls: |
+          https://theredheaded33712.github.io/ergonomically-economical/
+          https://theredheaded33712.github.io/ergonomically-economical/cart.html
+        uploadArtifacts: true
