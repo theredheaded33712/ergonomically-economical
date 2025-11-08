@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif; /* Simple readable font */
+  background-image: url('office-image.jpg'); /* Matches main site */
+  background-size: cover; /* Fill screen */
+  background-position: center; /* Center image */
+  background-attachment: fixed; /* Keeps image still on scroll */
+  color: #4f4934; /* Neutral text color */
+  /*color: #1a223b; 
+  margin: 0; /* Remove browser default margin */
+}
+
+/* Light logo pattern overlay */
+.background-logo {
+  background-image: url('ergo-square-logo.png'); /* Subtle pattern */
+  background-repeat: repeat;
+    filter: blur(50px)
+  opacity: 0.05;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* ======= Checkout Form Section ======= */
+.checkout-form {
+  background-color: rgba(7, 70, 73, 0.9); /* Light teal panel */
+  max-width: 500px; /* Keeps form narrow and centered */
+  margin: 60px auto; /* Centers form horizontally with top spacing */
+  padding: 30px; /* Space inside box */
+  border-radius: 15px; /* Soft rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light drop shadow */
+}
+
+.checkout-form h1 {
+  text-align: center; /* Centers heading */
+  color: #55401d; /* Dark brown for contrast */
+}
+
+.checkout-form p {
+  text-align: center; /* Centers subtext */
+  color: #4c746a; /* Gentle green-gray tone */
+}
+
+/* ======= Form Elements ======= */
+form {
+  display: flex; /* Aligns form fields vertically */
+  flex-direction: column;
+  gap: 15px; /* Space between inputs */
+}
+
+label {
+  font-weight: bold; /* Emphasize field labels */
+}
+
+input, textarea {
+  padding: 10px; /* Space inside inputs */
+  border: 1px solid #8fb1ce; /* Soft blue border */
+  border-radius: 5px; /* Slight rounding for clean look */
+  font-size: 1em; /* Readable text */
+  width: 100%; /* Full width of container */
+}
+
+/* ======= Submit Button ======= */
+.submit-btn {
+  background-color: #58c1e1; /* Blue button color */
+  color: white; /* White text for contrast */
+  padding: 12px; /* Size of button */
+  border: none; /* Removes default border */
+  border-radius: 25px; /* Rounded shape */
+  cursor: pointer; /* Changes cursor on hover */
+  font-size: 1.1em; /* Slightly larger text */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.submit-btn:hover {
+  background-color: #49a1e8; /* Darker shade on hover */
+}

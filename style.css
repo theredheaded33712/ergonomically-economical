@@ -1,0 +1,212 @@
+/* ======= Global Styles ======= */
+body {
+  margin: 0; /* Removes default margin from browser */
+  font-family: Arial, sans-serif; /* Sets easy-to-read font */
+  background-image: url('office-image.jpg'); /* Background image for entire site */
+  background-size: cover; /* Makes background image fill screen */
+  background-attachment: fixed; /* Keeps background still when scrolling */
+  background-position: center; /* Centers background image */
+  color: #4f4934; /* Neutral text color from your palette */
+}
+
+/* ======= NAVBAR STYLES ======= */
+.navbar {
+  display: flex; /* Places logo and links side by side */
+  justify-content: space-between; /* Pushes logo to left, links to right */
+  align-items: center; /* Centers vertically */
+  background-color: #59e7f8; /* Bright cyan background from palette */
+  padding: 15px 30px; /* Adds inner spacing */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds subtle shadow below navbar */
+  position: sticky; /* Keeps navbar visible when scrolling */
+  top: 0; /* Pins it to top of screen */
+  z-index: 1000; /* Keeps navbar above other sections */
+}
+
+/* ======= Logo Placeholder ======= */
+.logo img {
+  width: 180px; /* Sets logo size */
+  max-width: 50%; /* Ensures it doesn't overflow */
+  height: auto; /* Maintains correct aspect ratio */
+  object-fit: contain; /* Prevents logo from stretching */
+}
+
+/* ======= Navigation Links (Unified Button Look) ======= */
+.nav-links {
+  list-style: none; /* Removes bullet points */
+  display: flex; /* Puts links in a horizontal row */
+  gap: 20px; /* Space between each button */
+  margin: 0; /* Removes default margins */
+  padding: 0; /* Removes default padding */
+}
+
+/* All buttons (Home, About, Cart) share this unified style */
+.nav-links li a {
+  display: flex; /* Aligns icon/text horizontally */
+  align-items: center; /* Centers text vertically */
+  gap: 6px; /* Space between icon (if any) and text */
+  text-decoration: none; /* Removes underline */
+  background-color: #72a9d9; /* Soft blue background from palette */
+  color: white; /* White text for contrast */
+  font-weight: bold; /* Emphasizes link text */
+  font-size: 1.1em; /* Slightly larger for readability */
+  padding: 8px 14px; /* Button padding */
+  border-radius: 20px; /* Rounded button shape */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for all buttons */
+.nav-links li a:hover {
+  background-color: #49a1e8; /* Darker blue when hovered */
+  transform: scale(1.05); /* Slight grow effect on hover */
+}
+
+/* Keeps the shopping cart icon consistent in style */
+.cart-link {
+  /* No extra styling needed now since all buttons share same base */
+}
+
+/* ======= Cart Link Special Styling ======= */
+.cart-link {
+  display: flex; /* Aligns icon and text horizontally */
+  align-items: center; /* Centers vertically */
+  gap: 6px; /* Small gap between icon and text */
+  background-color: #72a9d9; /* Slightly darker blue for button */
+  color: white; /* White text for contrast */
+  padding: 8px 14px; /* Padding around text/icon */
+  border-radius: 20px; /* Rounded button shape */
+}
+
+.cart-link:hover {
+  background-color: #49a1e8; /* Slightly darker hover effect */
+}
+
+/* ======= Background Logo Overlay ======= */
+.background-logo {
+  background-image: url('office-image.jpg');/* Adds subtle logo pattern */
+  background-repeat: no-repeat; /* Tiles logo across background */
+  opacity: 0.03; /* Makes logo faint to avoid distraction */
+  position: fixed; /* Stays in same position while scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Sends it behind all content */
+}
+
+/* ======= Hero Section ======= */
+.hero {
+  background-color: #b2f7fa; /* Light color from palette for contrast */
+  text-align: center; /* Centers all text */
+  padding: 100px 20px; /* Adds space around text */
+  background-image: url('office-image.jpg'); /* ✅ Background image for section */
+  background-size: cover; /* ✅ Stretches image to cover entire section */
+  background-position: center; /* Centers the image nicely */
+  background-repeat: no-repeat; /* Prevents image from repeating */
+  background-attachment: fixed; /* Optional: adds subtle parallax effect */
+}
+
+.hero-content h1 {
+  font-size: 3em; /* Large main heading */
+  color: #55401d; /* Deep brown tone from palette */
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hero-content h2 {
+  font-size: 1.8em; /* Subheading size */
+  color: #49a1e8; /* Accent blue color */
+}
+
+.hero-content p {
+  font-size: 1.1em; /* Readable paragraph size */
+  max-width: 600px; /* Keeps text from stretching too wide */
+  margin: 20px auto; /* Centers paragraph block */
+  color: #0b3232; /* Neutral dark gray for readability */
+}
+
+.cta-button {
+  display: inline-block; /* Makes link act like a button */
+  background-color: #58c1e1; /* Bright blue button color */
+  color: white; /* White text for contrast */
+  text-decoration: none; /* Removes underline */
+  padding: 12px 25px; /* Adds button padding */
+  border-radius: 25px; /* Smooth rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover animation */
+}
+
+.cta-button:hover {
+  background-color: #49a1e8; /* Slightly darker blue on hover */
+}
+
+/* ======= PRODUCT TILE SECTION ======= */
+.tiles-section {
+  display: flex; /* Places tiles in a row */
+  justify-content: center; /* Centers them horizontally */
+  align-items: flex-start; /* Aligns them nicely at the top */
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  gap: 30px; /* Space between product cards */
+  padding: 80px 20px; /* Space around section */
+  background-color: #8fb1ce; /* Soft blue background */
+}
+
+/* Each floating product card */
+.product-tile {
+  width: 200px; /* Set consistent size */
+  background-color: #b2f7fa; /* Light teal background */
+  border-radius: 15px; /* Rounded edges */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Soft shadow */
+  padding: 15px; /* Inner spacing */
+  text-align: center; /* Center text */
+  animation: float 6s ease-in-out infinite; /* Floating effect */
+  transition: transform 0.3s ease; /* Smooth hover scale */
+}
+
+/* Slight lift effect when hovered */
+.product-tile:hover {
+  transform: scale(1.05);
+}
+
+/* Product images */
+.product-tile img {
+  width: 100%; /* Fill card width */
+  height: 150px; /* Set consistent image height */
+  object-fit: cover; /* Crop image neatly */
+  border-radius: 10px; /* Soft corner rounding */
+}
+
+/* Product title */
+.product-tile h3 {
+  font-size: 1.2em;
+  color: #55401d; /* Brown tone for contrast */
+  margin: 10px 0 5px 0;
+}
+
+/* Product price */
+.product-tile p {
+  color: #4c746a; /* Gentle green-gray */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Add to Cart button */
+.add-cart {
+  background-color: #58c1e1; /* Bright blue button */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-cart:hover {
+  background-color: #49a1e8; /* Slightly darker blue */
+}
+
+/* Floating animation keyframes */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
