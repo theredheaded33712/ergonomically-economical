@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout | ErgoEase</title>
+  <link rel="stylesheet" href="cart.css" />
+</head>
+
+<body>
+  <!-- Background logo pattern -->
+  <div class="background-logo"></div>
+
+  <section class="checkout-form">
+    <h1>Checkout</h1>
+    <p>Please provide your details to complete your purchase.</p>
+
+    <!-- ======= FORM START ======= -->
+    <form action="#" method="post">
+      <!-- Each input field has a label and a comment explaining it -->
+
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="John Smith" required />
+      <!-- Text box for user’s name -->
+
+      <label for="business">Business Name:</label>
+      <input type="text" id="business" name="business" placeholder="Ergo Co." />
+      <!-- Optional company name -->
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="3" placeholder="123 Main Street, Suite 100" required></textarea>
+      <!-- Address field -->
+
+      <label for="credit">Credit Card Information:</label>
+      <input type="text" id="credit" name="credit" placeholder="0000 0000 0000 0000" required />
+      <!-- Simulated credit card input (no real processing) -->
+
+      <label for="exp-date">Exp.Date:</label>
+      <input type="text" id="exp-date" name="exp-date" placeholder="00/00" required />
+
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" name="cvv" placeholder="000" required />
+
+      <label for="notes">Special Delivery Notes:</label>
+      <textarea id="notes" name="notes" rows="4" placeholder="Leave package at front desk..."></textarea>
+      <!-- Optional special delivery instructions -->
+
+      <button type="submit" class="submit-btn">Complete Purchase</button>
+      <!-- Submission button -->
+    </form>
+    <!-- ======= FORM END ======= -->
+  </section>
+</body>
+</html>
